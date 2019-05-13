@@ -9,6 +9,7 @@
 .project
 .metadata
 bin/**
+bifi/bin/**
 tmp/**
 tmp/**/*
 *.tmp
