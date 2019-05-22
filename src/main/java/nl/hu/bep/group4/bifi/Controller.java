@@ -13,6 +13,6 @@ public class Controller {
 	}
 	
 	public void main(String[] args) {
-		//TODO: do stuff
+		this.iefExporter.exportFacturen(null);
 	}
 }
