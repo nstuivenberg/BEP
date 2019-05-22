@@ -39,11 +39,11 @@ public class ControllerTest {
 		});
 	}
 	
-	public void testMaandNummer(int testMaandNummer) {
+	private void testMaandNummer(int testMaandNummer) {
 		testMaandNummerStrings(testMaandNummer, new String[] {"", ""+testMaandNummer});
 	}
 	
-	public void testMaandNummerStrings(int testMaandNummer, String[] arguments) {
+	private void testMaandNummerStrings(int testMaandNummer, String[] arguments) {
 		final ArrayList<Factuur> testData = new ArrayList<Factuur>();
 		testData.add(new Factuur(null, 0, null, null, null));
 		var exporter = new IEFExporter() {
