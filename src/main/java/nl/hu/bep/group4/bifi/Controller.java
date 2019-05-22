@@ -13,6 +13,7 @@ public class Controller {
 	}
 	
 	public void main(String[] args) {
-		this.iefExporter.exportFacturen(null);
+		int maandNummer = Integer.parseInt(args[1]);
+		this.iefExporter.exportFacturen(this.factuurLader.getFacturenVoorMaand(maandNummer));
 	}
 }
