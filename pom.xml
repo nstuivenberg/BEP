@@ -40,6 +40,11 @@
 			<artifactId>legacy</artifactId>
 			<version>1.0.2</version>
 		</dependency>
+		<dependency>
+			<groupId>nl.hu.bep.group4</groupId>
+			<artifactId>bifi-model</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>
