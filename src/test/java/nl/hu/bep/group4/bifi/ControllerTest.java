@@ -28,19 +28,19 @@ public class ControllerTest {
 	@Test
 	public void testInvalidNumber() {
 		Assertions.assertThrows(NumberFormatException.class, () -> {
-			testMaandNummerStrings(1, new String[] {"", "onzin"});
+			testMaandNummerStrings(1, new String[] {"onzin"});
 		});
 	}
 	
 	@Test
 	public void testNoArgument() {
 		Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
-			testMaandNummerStrings(1, new String[] {""});
+			testMaandNummerStrings(1, new String[] {});
 		});
 	}
 	
 	private void testMaandNummer(int testMaandNummer) {
-		testMaandNummerStrings(testMaandNummer, new String[] {"", ""+testMaandNummer});
+		testMaandNummerStrings(testMaandNummer, new String[] {""+testMaandNummer});
 	}
 	
 	private void testMaandNummerStrings(int testMaandNummer, String[] arguments) {
