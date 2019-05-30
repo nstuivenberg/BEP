@@ -45,7 +45,7 @@ public class ControllerTest {
 	
 	private void testMaandNummerStrings(int testMaandNummer, String[] arguments) {
 		final ArrayList<Factuur> testData = new ArrayList<Factuur>();
-		testData.add(new Factuur(null, 0, null, null, null));
+		testData.add(new Factuur(null, null, 0, null, null, null));
 		var exporter = new IEFExporter() {
 			public boolean exported = false;
 			public void exportFacturen(List<Factuur> facturen) {
