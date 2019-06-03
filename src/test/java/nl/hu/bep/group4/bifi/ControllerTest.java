@@ -4,24 +4,27 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import nl.hu.bep.group4.bifi.exceptions.GarbageDataException;
 import nl.hu.bep.group4.bifi.interfaces.FactuurLader;
 import nl.hu.bep.group4.bifi.interfaces.IEFExporter;
 import nl.hu.bep.group4.bifi.model.Factuur;
 
 public class ControllerTest {
 	@Test
-	public void test1() {
+	public void test1() throws ClassNotFoundException, GarbageDataException, SQLException, IOException {
 		testMaandNummer(1);
 	}
 	
 	@Test
-	public void test2() {
+	public void test2() throws ClassNotFoundException, GarbageDataException, SQLException, IOException {
 		testMaandNummer(2);
 	}
 	
@@ -39,11 +42,11 @@ public class ControllerTest {
 		});
 	}
 	
-	private void testMaandNummer(int testMaandNummer) {
+	private void testMaandNummer(int testMaandNummer) throws ClassNotFoundException, GarbageDataException, SQLException, IOException {
 		testMaandNummerStrings(testMaandNummer, new String[] {""+testMaandNummer});
 	}
 	
-	private void testMaandNummerStrings(int testMaandNummer, String[] arguments) {
+	private void testMaandNummerStrings(int testMaandNummer, String[] arguments) throws ClassNotFoundException, GarbageDataException, SQLException, IOException {
 		final ArrayList<Factuur> testData = new ArrayList<Factuur>();
 		testData.add(new Factuur(null, null, 0, null, null, null));
 		var exporter = new IEFExporter() {
