@@ -67,6 +67,11 @@
 			<artifactId>bifi-lader</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>nl.hu.bep.group4</groupId>
+			<artifactId>bifi-exporter</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>
