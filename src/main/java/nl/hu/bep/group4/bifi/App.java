@@ -15,4 +15,6 @@ public class App
 
         controller.main(args);
     }
+    
+    private App() {}
 }
