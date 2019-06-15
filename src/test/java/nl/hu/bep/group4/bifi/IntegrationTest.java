@@ -77,4 +77,5 @@ public class IntegrationTest {
 		assertEquals(persoon.getFax(), "test@test.com");
 		assertEquals(persoon.getGeslacht(), Persoon.Geslacht.VROUW);
 	}
+	
 }
