@@ -28,39 +28,39 @@ public class IntegrationTest {
 		
 		Klant klant = factuur.getKlant();
 		assertNotNull(klant);
-		assertEquals(klant.getId(), 3);
-		assertEquals(klant.getBedrijfsnaam(), "MarcOtter");
-		assertEquals(klant.getRechtsvorm(), "bv");
-		assertEquals(klant.getVAT(), "NL001234567B01");
-		assertEquals(klant.getBankrekeningNummer(), "NL91ABNA0417164300");
+		assertEquals(3, klant.getId());
+		assertEquals("MarcOtter", klant.getBedrijfsnaam());
+		assertEquals("bv", klant.getRechtsvorm());
+		assertEquals("NL001234567B01", klant.getVAT());
+		assertEquals("NL91ABNA0417164300", klant.getBankrekeningNummer());
 		assertNull(klant.getGiroNummer());
-		assertEquals(klant.getBiC(), "DABAIE2D");
+		assertEquals("DABAIE2D", klant.getBiC());
 		
-		assertEquals(klant.getContactPersonen().size(), 1);
+		assertEquals(1, klant.getContactPersonen().size());
 		Persoon contactPersoon = klant.getContactPersonen().get(0);
 		checkMarineVanHulst(contactPersoon);
 		
-		assertEquals(klant.getAdres().size(), 0);
+		assertEquals(0, klant.getAdres().size());
 		
 		Adres factuurAdres = klant.getFactuurAdres();
-		assertEquals(factuurAdres.getStraat(), "Wassenlaan");
-		assertEquals(factuurAdres.getHuisnummer(), "358");
-		assertEquals(factuurAdres.getPostcode(), "4302CD");
-		assertEquals(factuurAdres.getPlaats(), "Zevenhuizen");
+		assertEquals("Wassenlaan", factuurAdres.getStraat());
+		assertEquals("358", factuurAdres.getHuisnummer());
+		assertEquals("4302CD", factuurAdres.getPostcode());
+		assertEquals("Zevenhuizen", factuurAdres.getPlaats());
 		assertNull(factuurAdres.getBiC());
 		
-		assertEquals(factuur.getDatumtijd(), "Sat Jun 16 12:23:40 CEST 2018");
-		assertEquals(factuur.getFactuurNummer(), 1);
+		assertEquals("2018-06-16T10:23:40.049Z", factuur.getDatumtijd());
+		assertEquals(1, factuur.getFactuurNummer());
 		
-		assertEquals(factuur.getFactuurregels().size(), 1);
+		assertEquals(1, factuur.getFactuurregels().size());
 		FactuurRegel factuurRegel = factuur.getFactuurregels().get(0);
 		assertNotNull(factuurRegel);
-		assertEquals(factuurRegel.getProductID(), 1);
-		assertEquals(factuurRegel.getProductNaam(), "BiFi worstjes voordeelstrip");
-		assertEquals(factuurRegel.getAantal(), 20);
-		assertEquals(factuurRegel.getTotaalprijsExBTW(), 30);
-		assertEquals(factuurRegel.getBtwCode(), FactuurRegel.BTWcode.HOOG);
-		assertEquals(factuurRegel.getUnit(), FactuurRegel.Unit.KILOGRAM);
+		assertEquals(1, factuurRegel.getProductID());
+		assertEquals("BiFi worstjes voordeelstrip", factuurRegel.getProductNaam());
+		assertEquals(20, factuurRegel.getAantal());
+		assertEquals(30, factuurRegel.getTotaalprijsExBTW());
+		assertEquals(FactuurRegel.BTWcode.HOOG, factuurRegel.getBtwCode());
+		assertEquals(FactuurRegel.Unit.KILOGRAM, factuurRegel.getUnit());
 		
 		assertNull(factuur.getOpmerking());
 		
@@ -69,12 +69,12 @@ public class IntegrationTest {
 
 	private void checkMarineVanHulst(Persoon persoon) {
 		assertNotNull(persoon);
-		assertEquals(persoon.getId(), 3);
-		assertEquals(persoon.getVoornaam(), "Marine");
-		assertEquals(persoon.getAchternaam(), "Hulst");
-		assertEquals(persoon.getTussenvoegsel(), "van");
-		assertEquals(persoon.getTelefoon(), "2147483647");
-		assertEquals(persoon.getFax(), "test@test.com");
-		assertEquals(persoon.getGeslacht(), Persoon.Geslacht.VROUW);
+		assertEquals(3, persoon.getId());
+		assertEquals("Marine", persoon.getVoornaam());
+		assertEquals("Hulst", persoon.getAchternaam());
+		assertEquals("van", persoon.getTussenvoegsel());
+		assertEquals("2147483647", persoon.getTelefoon());
+		assertEquals("test@test.com", persoon.getFax());
+		assertEquals(Persoon.Geslacht.VROUW, persoon.getGeslacht());
 	}
 }
