@@ -47,7 +47,7 @@ public class IntegrationTest {
 		assertEquals("358", factuurAdres.getHuisnummer());
 		assertEquals("4302CD", factuurAdres.getPostcode());
 		assertEquals("Zevenhuizen", factuurAdres.getPlaats());
-		assertNull(factuurAdres.getBiC());
+		assertNull(factuurAdres.getBic());
 		
 		assertEquals("2018-06-16T10:23:40.049Z", factuur.getDatumtijd());
 		assertEquals(1, factuur.getFactuurNummer());
