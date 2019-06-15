@@ -14,6 +14,6 @@ public class AppTest {
     @Test
     public void testEverything() throws ClassNotFoundException, GarbageDataException, SQLException, IOException {
     	App.main(new String[] {"5"});
-        assertEquals(1+2, 3);
+        assertEquals(3, 1+2);
     }
 }
