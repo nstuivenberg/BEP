@@ -9,10 +9,10 @@ import nl.hu.bep.group4.bifi.exporter.factories.IEFExporterFactory;
 
 public class App 
 {
-    public static void main(String[] args) throws ClassNotFoundException, GarbageDataException, SQLException, IOException
-    {
-    	Controller controller = new Controller(FactuurLaderFactory.createFactuurLader(), IEFExporterFactory.createIEFExporter());
-
+    public static void main(String[] args)
+            throws ClassNotFoundException, GarbageDataException, SQLException, IOException {
+    	Controller controller =
+                new Controller(FactuurLaderFactory.createFactuurLader(), IEFExporterFactory.createIEFExporter());
         controller.main(args);
     }
     
