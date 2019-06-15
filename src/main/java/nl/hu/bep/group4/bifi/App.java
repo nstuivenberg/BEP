@@ -12,7 +12,6 @@ public class App
     public static void main(String[] args) throws ClassNotFoundException, GarbageDataException, SQLException, IOException
     {
     	Controller controller = new Controller(FactuurLaderFactory.createFactuurLader(), IEFExporterFactory.createIEFExporter());
-
         controller.main(args);
     }
 }
