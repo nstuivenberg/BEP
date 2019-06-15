@@ -20,4 +20,12 @@ public class Controller {
 		int maandNummer = Integer.parseInt(args[0]);
 		this.iefExporter.exportFacturen(this.factuurLader.getFacturenVoorMaand(maandNummer));
 	}
+
+	public FactuurLader getFactuurLader() {
+		return factuurLader;
+	}
+
+	public IEFExporter getIefExporter() {
+		return iefExporter;
+	}
 }

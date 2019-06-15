@@ -11,6 +11,8 @@ public class App
     public static void main(String[] args) throws ClassNotFoundException, GarbageDataException, SQLException, IOException
     {
     	//TODO: add factory for IEFExporter
-    	new Controller(FactuurLaderFactory.createFactuurLader(), null).main(args);
+    	Controller controller = new Controller(FactuurLaderFactory.createFactuurLader(), null);
+
+        controller.main(args);
     }
 }
