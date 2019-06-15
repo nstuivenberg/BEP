@@ -19,16 +19,6 @@ import nl.hu.bep.group4.bifi.model.Factuur;
 
 public class ControllerTest {
 	@Test
-	public void test1() throws ClassNotFoundException, GarbageDataException, SQLException, IOException {
-		testMaandNummer(1);
-	}
-	
-	@Test
-	public void test2() throws ClassNotFoundException, GarbageDataException, SQLException, IOException {
-		testMaandNummer(2);
-	}
-	
-	@Test
 	public void testInvalidNumber() {
 		Assertions.assertThrows(NumberFormatException.class, () -> {
 			testMaandNummerStrings(1, new String[] {"onzin"});
@@ -40,10 +30,6 @@ public class ControllerTest {
 		Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
 			testMaandNummerStrings(1, new String[] {});
 		});
-	}
-	
-	private void testMaandNummer(int testMaandNummer) throws ClassNotFoundException, GarbageDataException, SQLException, IOException {
-		testMaandNummerStrings(testMaandNummer, new String[] {""+testMaandNummer});
 	}
 	
 	private void testMaandNummerStrings(int testMaandNummer, String[] arguments) throws ClassNotFoundException, GarbageDataException, SQLException, IOException {
