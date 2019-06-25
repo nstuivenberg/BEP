@@ -35,6 +35,7 @@ public class ControllerTest {
 	private void testMaandNummerStrings(int testMaandNummer, String[] arguments) throws ClassNotFoundException, GarbageDataException, SQLException, IOException {
 		final ArrayList<Factuur> testData = new ArrayList<>();
 		testData.add(new Factuur(null, null, 0, null, null, null));
+		
 		var exporter = new IEFExporter() {
 			public boolean exported = false;
 			public String exportFacturen(List<Factuur> facturen) {
