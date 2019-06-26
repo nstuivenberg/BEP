@@ -38,10 +38,11 @@ public class ControllerTest {
 		
 		var exporter = new IEFExporter() {
 			public boolean exported = false;
-			public void exportFacturen(List<Factuur> facturen) {
+			public String exportFacturen(List<Factuur> facturen) {
 				assertNotNull(facturen);
 				assertEquals(facturen, testData);
 				exported = true;
+				return null;
 			}
 		};
 		Controller c = new Controller(new FactuurLader() {
